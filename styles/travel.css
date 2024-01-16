@@ -11,7 +11,6 @@ nav,
 main {
   width: 90%;
   margin: auto;
-  border: 2px solid aqua;
 }
 section {
   width: 100%;
@@ -19,7 +18,7 @@ section {
 }
 :root {
   --primary-color: #ff5400;
-  --black-primary:#000;
+  --black-primary: #000;
 }
 
 /* Start Navbar Section */
@@ -183,13 +182,16 @@ header {
 }
 .popular-ture-text p {
   margin-bottom: 20px;
+     color: var(--Black-75, rgba(0, 0, 0, 0.5));
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 200%;
 }
 .popular-ture-text li {
   margin-bottom: 10px;
 }
 
 /* Destination Section */
-
 
 .heading {
   text-align: center;
@@ -250,9 +252,10 @@ header {
 /* Choose Section */
 
 .box-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  display: flex;
   gap: 24px;
+  margin-bottom: 24px;
 }
 .box {
   border-radius: 16px;
@@ -262,6 +265,10 @@ header {
   width: 670px;
   height: 284px;
 }
+.box h3,
+p {
+  margin-top: 20px;
+}
 .box-2 {
   border: 1px solid rgba(41, 206, 246, 0.2);
   background: rgba(41, 206, 246, 0.05);
@@ -270,6 +277,12 @@ header {
   border: 1px solid rgba(233, 68, 68, 0.2);
   background: rgba(233, 68, 68, 0.05);
   margin-bottom: 120px;
+}
+.under-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* deals and discount section */
@@ -301,6 +314,14 @@ header {
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(2.5px);
 }
+#details-text-2 {
+  top: 18%;
+  left: 5rem;
+}
+.box-p{
+  display: flex;
+  gap: 20px;
+}
 .deals-text h3,
 p {
   margin-bottom: 2rem;
@@ -326,38 +347,46 @@ p {
   text-align: justify;
   width: 50%;
 }
-.contact-img img{
+.contact-img img {
   width: 500px;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 20px;
 }
-.contact-text p,li {
+.youtube-heading{
+   width: 450px;
+    text-align: left;
+    font-size: 40px;
+}
+.contact-text p,
+li {
   margin-bottom: 24px;
-  color: var(--Black-75, rgba(0, 0, 0, 0.50));
-font-size: 20px;
-font-weight: 400;
-line-height: 200%; /* 40px */
+  color: var(--Black-75, rgba(0, 0, 0, 0.5));
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 200%; /* 40px */
 }
 .contact-text h1 {
   margin-bottom: 24px;
   width: 500px;
   color: var(--Black-primary, #000);
-font-size: 48px;
-font-weight: 800;
+  font-size: 40px;
+  font-weight: 800;
 }
-.youtube-vedio iframe{
+.youtube-vedio iframe {
   object-fit: cover;
   border-radius: 20px;
 }
 
 /* Newsletter Section */
 
-
-.subs-container{
+.subs-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
-#form-input{
+#form-input {
   width: 400px;
   height: 50px;
   border: none;
@@ -368,29 +397,29 @@ font-weight: 800;
   margin-top: 16px;
   background: rgba(19, 19, 24, 0.05);
 }
-.newsletter{
+.newsletter {
   border: 2px solid var(--primary-color);
   padding: 90px 40px;
   border-radius: 10px;
   width: 38%;
 }
-.newsletter h1{
+.newsletter h1 {
   margin-bottom: 20px;
 }
-.discount a{
+.discount a {
   color: white;
 }
-.discount a:hover{
+.discount a:hover {
   color: rgb(13, 0, 11);
 }
-.subs-img{
+.subs-img {
   width: 60%;
   position: relative;
 }
-.subs-img img{
+.subs-img img {
   width: 100%;
 }
-.discount{
+.discount {
   position: absolute;
   bottom: 55px;
   right: 5px;
@@ -403,18 +432,10 @@ font-weight: 800;
   border-radius: 10px;
 }
 
-
-
-
-
-
-
-
 /* footer section */
 footer {
   padding: 50px;
-  min-width: 1;
-  margin: auto;
+  min-width: 100%;
   background: rgba(19, 19, 24, 0.05);
   margin-top: 120px;
 }
@@ -446,15 +467,20 @@ footer p {
 
 
 
-@media screen and (max-width: 991px) {
-  /* Navbar for tablet */
-  nav ul {
-    gap: 18px;
-  }
-}
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 600px) {
   /* Navbar for mobile */
+
   nav h1 {
     font-size: 30px;
     font-weight: 700;
@@ -510,6 +536,9 @@ footer p {
     width: 50px;
     height: auto;
   }
+
+  /* Header Section */
+
   .input {
     display: flex;
     flex-direction: column;
@@ -519,10 +548,10 @@ footer p {
     width: 300px;
   }
   .header {
-    height: 580px;
+    height: 630px;
   }
   .header-text {
-    padding: 20px 0 20px 0;
+    padding: 100px 0 20px 0;
   }
   .header-text h1 {
     color: #fff;
@@ -538,10 +567,17 @@ footer p {
     font-size: 16px;
     font-weight: 400;
     line-height: 26px;
+    margin-bottom: 0;
   }
+
+  /* Popular Section */
+
   .popular-ture {
     width: 100%;
     flex-direction: column;
+  }
+  .popular-ture-text h3 {
+    text-align: center;
   }
   .popular-ture-text button {
     width: 150px;
@@ -550,20 +586,137 @@ footer p {
   .popular-ture-img img {
     width: 100%;
   }
-  .collage .img {
+
+  /* Image collage section */
+
+  .collage div {
     width: 100%;
-    background-size: cover;
-    object-fit: cover;
-    background-position: center;
+    height: 300px;
   }
-  .col-3 {
-    width: 100%;
-  }
+
   .collage {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    flex-direction: column;
     width: 100%;
   }
+
+  /* Choose Section */
+
+  .box-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+.box{
+  width: 100%;
+}
+
+/* Deals and Discount Section */
+
+
+.deals-img img {
+  height: 600px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.deals-text{
+  width: 80%;
+  left: 10%;
+  padding: 20px;
+  gap: 0;
+
+}
+#details-text-2 {
+  width: 80%;
+  left: 10%;
+  padding: 20px;
+  gap: 0;
+}
+.deals-text h3,
+p {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.deals-text button{
+  width: 200px;
+}
+.place{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+  margin-top: 0;
+  gap: 0;
+  line-height: 0;
+  padding: 0;
+  height: 100px;
+}
+.place >p{
+  margin-bottom: 0;
+}
+.box-p{
+  display: flex;
+  gap: 20px;
+}
+.place p {
+  line-height: 0;
+}
+.btn-container{
+  text-align: center;
+}
+
+.contact-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.contact-img img{
+  width: 100%;
+}
+.contact-text button{
+  width: 200px;
+}
+.contact-text{
+  width: 100%;
+}
+ .contact-text h1{
+  margin-top: 50px;
+  width: 100%;
+  font-size: 30px;
+ }
+.youtube-vedio, iframe{
+  width: 100%;
+  margin-top: 30px;
+  object-fit: cover;
+}
+
+/* Newsletter Section */
+
+.subs-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.newsletter{
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+.subs-img{
+  width: 100%;
+}
+#form-input{
+  width: 100%;
+}
+.discount{
+  width: 250px;
+  bottom: 45px;
+}
+
+  /* Footer section */
+
   .footer-title h1 {
     font-size: 30px;
     font-weight: 700;
